@@ -9,7 +9,7 @@ const Boton = (props) => {
   };
 
   return (
-    <div
+    <button
       // Aplicamos clase boton-contendor siempre. Pasamos por parametro
       // a la funcion esOperador los props.children. Si el retorno de la
       // funcion es true le asignamos también la clase operador
@@ -19,7 +19,7 @@ const Boton = (props) => {
       onClick={() => props.manejarClic(props.children)}
     >
       {props.children}
-    </div>
+    </button>
   );
 };
 
