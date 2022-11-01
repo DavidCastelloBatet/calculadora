@@ -12,6 +12,7 @@ function App() {
   const agregarInput = (val) => setInput(input + val);
   const clearInput = () => setInput('');
   const calcularResultado = () => {
+    // Realització dels calculs + prevent undefined
     input !== '' ? setInput(evaluate(input)) : setInput('');
   };
 
