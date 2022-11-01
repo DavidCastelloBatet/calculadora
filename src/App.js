@@ -1,9 +1,9 @@
+import { useState } from 'react';
 import './App.css';
 import Boton from './components/Boton';
 import BotonClear from './components/BotonClear';
 import Pantalla from './components/Pantalla';
-import logo from './images/logo.png';
-import { useState } from 'react';
+import Logo from './components/Logo';
 import { evaluate } from 'mathjs';
 
 function App() {
@@ -15,18 +15,15 @@ function App() {
     // Realització dels calculs + prevent undefined
     input !== '' ? setInput(evaluate(input)) : setInput('');
   };
+  const borrarUno = () => {
+    input !== ''
+      ? setInput(input.substring(0, input.length - 1))
+      : setInput('');
+  };
 
   return (
     <div className="App">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src={logo}
-          alt="Mr. Bean Calculator"
-          title="Mr. Bean Calculator"
-        />
-        <h1>Calculator</h1>
-      </div>
+      <Logo />
       <div className="contenedor-calculadora">
         <Pantalla input={input} />
         <div className="fila">
@@ -55,7 +52,8 @@ function App() {
           <Boton manejarClic={agregarInput}>/</Boton>
         </div>
         <div className="fila">
-          <BotonClear limpiarPantalla={clearInput}>Clear</BotonClear>
+          <BotonClear limpiarPantalla={clearInput}>Limpiar</BotonClear>
+          <BotonClear limpiarPantalla={borrarUno}>Borrar</BotonClear>
         </div>
       </div>
     </div>

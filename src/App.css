@@ -7,28 +7,6 @@
   align-items: center;
 }
 
-.logo-contenedor {
-  width: 100%;
-  height: 100px;
-  margin: 8px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.logo {
-  height: 100px;
-  margin-right: 50px;
-}
-
-h1 {
-  color: white;
-  text-align: center;
-  font-size: 15px;
-  margin-right: 50px;
-}
-
 .contenedor-calculadora {
   width: 400px;
   height: 600px;
